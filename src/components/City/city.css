@@ -1,0 +1,87 @@
+.city {
+    color: #626977;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.box {
+    width: 200px;
+    height: 300px;
+    background: #FFF;
+    /* margin: 40px auto; */
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    word-break: break-all;
+}
+
+.box:hover {
+    background: #f7f9ff;
+}
+
+.box h3 {
+    margin: 10px 0 5px 0;
+}
+
+.box h4 {
+    margin: 0 0 10px 0;
+}
+
+.box p {
+    margin: 0;
+}
+
+.box .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.box .close:hover {
+    color: #626977;
+}
+
+.box .close:active {
+    color: #ddd;
+}
+
+.effect2 {
+  position: relative;
+}
+
+.effect2:before, .effect2:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.effect2:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}

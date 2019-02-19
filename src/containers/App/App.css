@@ -9,18 +9,38 @@
 }
 
 .App-header {
+  position: sticky;
+  top: 0;
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #626977;
+  z-index: 1;
+}
+
+.App-body {
+  /* background-color: #626977; */
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* font-size: calc(10px + 2vmin); */
+  color: #282c34;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.cities-wrapper {
+  min-width: 90vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 @keyframes App-logo-spin {
