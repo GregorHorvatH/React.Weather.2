@@ -1,5 +1,20 @@
+#root {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .App {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   text-align: center;
+  background-image: url('../../assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {
@@ -41,6 +56,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  z-index: 0;
 }
 
 @keyframes App-logo-spin {
