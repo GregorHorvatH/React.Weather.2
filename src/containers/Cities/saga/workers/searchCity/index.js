@@ -10,7 +10,7 @@ export function* searchCityWorker ({ payload: city }) {
 
         const response = yield call(
             fetch,
-            `https://api.openweathermap.org/data/2.5/find?q=${ city }&appid=ecd63065bd25bdde07e45cd2f66852ce`,
+            `https://api.openweathermap.org/data/2.5/find?units=metric&q=${ city }&appid=ecd63065bd25bdde07e45cd2f66852ce`,
             { method:  'GET' }
         );
 

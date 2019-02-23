@@ -13,7 +13,7 @@ class Cities extends Component {
   componentDidMount() {
     const { fetchCity } = this.props.actions;
 
-    fetchCity();
+    fetchCity(2643743);
   }
 
   _onDelete = (id) => {

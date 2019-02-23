@@ -4,13 +4,13 @@ import { put, call } from 'redux-saga/effects';
 // Instruments
 import citiesActions from '../../../actions';
 
-export function* fetchCityWorker ({ payload }) {
+export function* fetchCityWorker ({ payload: id }) {
     try {
         yield put(citiesActions.fetchCityStart());
 
         const response = yield call(
             fetch,
-            `https://api.openweathermap.org/data/2.5/weather?units=metric&q=kyiv&appid=ecd63065bd25bdde07e45cd2f66852ce`,
+            `https://api.openweathermap.org/data/2.5/weather?units=metric&id=${ id }&appid=ecd63065bd25bdde07e45cd2f66852ce`,
             { method:  'GET' }
         );
 

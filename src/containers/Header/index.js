@@ -10,14 +10,27 @@ import citiesActions from '../Cities/actions';
 import Search from '../../components/Search';
 
 class Header extends Component {
+  _handleSelectCity = (id) => {
+    const { deleteSearchEntities, fetchCity } = this.props.actions;
+
+    console.log('city id: ', id);
+    fetchCity(id);
+    deleteSearchEntities();
+  }
+
   render() {
     const { searchCity } = this.props.actions;
-    const { searchEntities } = this.props.cities;
+    const { searchEntities, isLoading } = this.props.cities;
 
     return (
       <header className="App-header">
         <h2>Weather</h2>
-        <Search onSearch = { searchCity } entities = { searchEntities } />
+        <Search
+          entities = { searchEntities }
+          isLoading = { isLoading }
+          onSearch = { searchCity }
+          onSelect = { this._handleSelectCity }
+        />
       </header>
     );
   }

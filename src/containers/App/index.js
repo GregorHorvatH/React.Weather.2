@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 // Containers
 import Cities from '../Cities';
@@ -17,6 +17,7 @@ import store from '../../store';
 import './App.css';
 
 library.add(faSearch);
+library.add(faSpinner);
 
 class App extends Component {
   render() {

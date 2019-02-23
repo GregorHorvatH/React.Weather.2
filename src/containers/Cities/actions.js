@@ -1,8 +1,9 @@
 import types from './types';
 
 export default Object.freeze({
-  fetchCity: () => ({
-    type: types.FETCH_CITY,
+  fetchCity: (id) => ({
+    type:    types.FETCH_CITY,
+    payload: id,
   }),
   fetchCitySuccess: (city) => ({
     type:    types.FETCH_CITY_SUCCESS,
@@ -35,8 +36,11 @@ export default Object.freeze({
     type: types.FETCH_CITY_STOP,
   }),
 
+  deleteSearchEntities: () => ({
+    type: types.DELETE_SEARCH_ENTITIES,
+  }),
   deleteCity: (id) => ({
-    type: types.DELETE_CITY,
+    type:    types.DELETE_CITY,
     payload: id,
   }),
 });
