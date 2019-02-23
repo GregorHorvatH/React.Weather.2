@@ -1,6 +1,8 @@
 // Core
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 // Containers
 import Cities from '../Cities';
@@ -13,6 +15,8 @@ import store from '../../store';
 
 // Styles
 import './App.css';
+
+library.add(faSearch);
 
 class App extends Component {
   render() {
