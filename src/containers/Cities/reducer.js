@@ -1,7 +1,8 @@
 import types from './types';
 
 const initialState = {
-    entities: []
+    cityEntities: [],
+    searchEntities: []
 };
 
 const cities = (state = initialState, action) => {
@@ -11,15 +12,15 @@ const cities = (state = initialState, action) => {
     case types.FETCH_CITY_SUCCESS:
       return {
         ...state,
-        entities: [
-          ...state.entities,
+        cityEntities: [
+          ...state.cityEntities,
           payload,
         ],
       };
     case types.DELETE_CITY:
       return {
         ...state,
-        entities: state.entities.filter(city => city.id !== payload),
+        cityEntities: state.cityEntities.filter(city => city.id !== payload),
       };
     default:
       return state;

@@ -2,9 +2,9 @@
 import { put, call } from 'redux-saga/effects';
 
 // Instruments
-import citiesActions from '../../../../containers/Cities/actions';
+import citiesActions from '../../../actions';
 
-export function* fetchCityWorker ({ payload: options }) {
+export function* fetchCityWorker ({ payload }) {
     try {
         yield put(citiesActions.fetchCityStart());
 
@@ -17,7 +17,7 @@ export function* fetchCityWorker ({ payload: options }) {
         const city = yield call([response, response.json]);
 
         if (response.status !== 200) {
-            throw new Error('error get pets');
+            throw new Error('error fetch city');
         }
 
         yield put(citiesActions.fetchCitySuccess(city));

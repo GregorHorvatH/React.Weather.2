@@ -8,7 +8,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Cities from '../Cities';
 
 // Components
-import Header from '../../components/Header';
+import Header from '../Header';
 
 // Store
 import store from '../../store';

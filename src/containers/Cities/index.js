@@ -23,12 +23,12 @@ class Cities extends Component {
   }
 
   render () {
-    const { entities } = this.props.cities;
+    const { cityEntities } = this.props.cities;
 
     return (
       <div className="cities-wrapper">
         {
-          entities.map(city => {
+          cityEntities.map(city => {
             const { id, name, sys, wind, main} = city;
             const { icon, description } = city.weather[0];
             const { speed } = wind;
